@@ -1,4 +1,5 @@
 from ex1 import check_if_symmetric
+from ex2 import convert_to_numbers
 
 tests = [
     {
@@ -11,7 +12,6 @@ tests = [
         'input': 'batman',
         'output': False
     },
-    # Edge cases
     {
         'function': check_if_symmetric,
         'input': '',
@@ -46,6 +46,38 @@ tests = [
         'function': check_if_symmetric,
         'input': 'No lemon, no melon',
         'output': False  # Punctuation and spaces are considered, not a palindrome
+    },
+
+    # Tests for convert_to_numbers
+    {
+        'function': convert_to_numbers,
+        'input': 'a cat',
+        'output': [1, 0, 3, 1, 20]
+    },
+    {
+        'function': convert_to_numbers,
+        'input': 'hello world',
+        'output': [8, 5, 12, 12, 15, 0, 23, 15, 18, 12, 4]
+    },
+    {
+        'function': convert_to_numbers,
+        'input': ' ',
+        'output': [0]
+    },
+    {
+        'function': convert_to_numbers,
+        'input': 'abc',
+        'output': [1, 2, 3]
+    },
+    {
+        'function': convert_to_numbers,
+        'input': 'zoo',
+        'output': [26, 15, 15]
+    },
+    {
+        'function': convert_to_numbers,
+        'input': 'a b c',
+        'output': [1, 0, 2, 0, 3]
     }
 ]
 

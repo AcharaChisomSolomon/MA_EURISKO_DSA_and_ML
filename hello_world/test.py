@@ -1,5 +1,6 @@
 from ex1 import check_if_symmetric
 from ex2 import convert_to_numbers
+from ex3 import convert_to_letters
 
 tests = [
     {
@@ -78,7 +79,41 @@ tests = [
         'function': convert_to_numbers,
         'input': 'a b c',
         'output': [1, 0, 2, 0, 3]
-    }
+    },
+
+    #Test for convert_to_letters
+    {
+        'function': convert_to_letters,
+        'input': [1, 0, 3, 1, 20],
+        'output': 'a cat'
+    },
+    {
+        'function': convert_to_letters,
+        'input': [8, 5, 12, 12, 15, 0, 23, 15, 18, 12, 4],
+        'output': 'hello world'
+    },
+    {
+        'function': convert_to_letters,
+        'input': [0],
+        'output': ' '
+    },
+    {
+        'function': convert_to_letters,
+        'input': [1, 2, 3],
+        'output': 'abc'
+    },
+    {
+        'function': convert_to_letters,
+        'input': [26, 15, 15],
+        'output': 'zoo'
+    },
+    {
+        'function': convert_to_letters,
+        'input': [1, 0, 2, 0, 3],
+        'output': 'a b c'
+    },
+
+    
 ]
 
 num_successes = 0

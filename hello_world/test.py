@@ -2,6 +2,7 @@ from ex1 import check_if_symmetric
 from ex2 import convert_to_numbers
 from ex3 import convert_to_letters
 from ex4 import get_intersection
+from ex5 import get_union
 
 tests = [
     {
@@ -144,6 +145,38 @@ tests = [
         'function': get_intersection,
         'input': ([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]),
         'output': [3, 4, 5]
+    },
+
+    # Tests for get_union
+    {
+        'function': get_union,
+        'input': ([1, 2, 3], [2, 3, 4]),
+        'output': [1, 2, 3, 4]
+    },
+    {
+        'function': get_union,
+        'input': ([1, 2, 2, 3], [2, 2, 3, 4]),
+        'output': [1, 2, 3, 4]
+    },
+    {
+        'function': get_union,
+        'input': ([1, 2, 3], [4, 5, 6]),
+        'output': [1, 2, 3, 4, 5, 6]
+    },
+    {
+        'function': get_union,
+        'input': ([], [1, 2, 3]),
+        'output': [1, 2, 3]
+    },
+    {
+        'function': get_union,
+        'input': ([1, 2, 3], []),
+        'output': [1, 2, 3]
+    },
+    {
+        'function': get_union,
+        'input': ([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]),
+        'output': [1, 2, 3, 4, 5, 6, 7]
     }
 ]
 

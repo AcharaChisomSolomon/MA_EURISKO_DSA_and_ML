@@ -1,6 +1,7 @@
 from ex1 import check_if_symmetric
 from ex2 import convert_to_numbers
 from ex3 import convert_to_letters
+from ex4 import get_intersection
 
 tests = [
     {
@@ -113,7 +114,37 @@ tests = [
         'output': 'a b c'
     },
 
-    
+    # Tests for get_intersection
+    {
+        'function': get_intersection,
+        'input': ([1, 2, 3], [2, 3, 4]),
+        'output': [2, 3]
+    },
+    {
+        'function': get_intersection,
+        'input': ([1, 2, 2, 3], [2, 2, 3, 4]),
+        'output': [2, 3]
+    },
+    {
+        'function': get_intersection,
+        'input': ([1, 2, 3], [4, 5, 6]),
+        'output': []
+    },
+    {
+        'function': get_intersection,
+        'input': ([], [1, 2, 3]),
+        'output': []
+    },
+    {
+        'function': get_intersection,
+        'input': ([1, 2, 3], []),
+        'output': []
+    },
+    {
+        'function': get_intersection,
+        'input': ([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]),
+        'output': [3, 4, 5]
+    }
 ]
 
 num_successes = 0
@@ -123,7 +154,13 @@ for test in tests:
     function = test['function']
     test_input = test['input']
     desired_output = test['output']
-    actual_output = function(test_input)
+    
+    # Check if the input is a tuple (for functions that take multiple arguments)
+    if isinstance(test_input, tuple):
+        actual_output = function(*test_input)
+    else:
+        actual_output = function(test_input)
+    
     if actual_output == desired_output:
         num_successes += 1
     else:

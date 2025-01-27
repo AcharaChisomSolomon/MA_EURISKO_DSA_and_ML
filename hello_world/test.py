@@ -4,6 +4,7 @@ from ex3 import convert_to_letters
 from ex4 import get_intersection
 from ex5 import get_union
 from ex6 import count_characters
+from ex7 import is_prime
 
 tests = [
     {
@@ -210,6 +211,48 @@ tests = [
         'function': count_characters,
         'input': 'aAaA',
         'output': {'a': 4}
+    },
+
+    # Tests for is_prime
+    {
+        'function': is_prime,
+        'input': 2,
+        'output': True  # 2 is the smallest prime number
+    },
+    {
+        'function': is_prime,
+        'input': 3,
+        'output': True  # 3 is a prime number
+    },
+    {
+        'function': is_prime,
+        'input': 4,
+        'output': False  # 4 is not a prime number (divisible by 2)
+    },
+    {
+        'function': is_prime,
+        'input': 17,
+        'output': True  # 17 is a prime number
+    },
+    {
+        'function': is_prime,
+        'input': 18,
+        'output': False  # 18 is not a prime number (divisible by 2, 3, 6, 9)
+    },
+    {
+        'function': is_prime,
+        'input': 19,
+        'output': True  # 19 is a prime number
+    },
+    {
+        'function': is_prime,
+        'input': 20,
+        'output': False  # 20 is not a prime number (divisible by 2, 4, 5, 10)
+    },
+    {
+        'function': is_prime,
+        'input': 1,
+        'output': False  # 1 is not greater than 1, hence not a prime number
     }
 ]
 

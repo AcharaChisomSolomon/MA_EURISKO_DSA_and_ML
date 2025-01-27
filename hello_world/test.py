@@ -3,6 +3,7 @@ from ex2 import convert_to_numbers
 from ex3 import convert_to_letters
 from ex4 import get_intersection
 from ex5 import get_union
+from ex6 import count_characters
 
 tests = [
     {
@@ -177,6 +178,38 @@ tests = [
         'function': get_union,
         'input': ([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]),
         'output': [1, 2, 3, 4, 5, 6, 7]
+    },
+
+    # Tests for count_characters
+    {
+        'function': count_characters,
+        'input': 'A cat!!!',
+        'output': {'a': 2, 'c': 1, 't': 1, ' ': 1, '!': 3}
+    },
+    {
+        'function': count_characters,
+        'input': 'Hello World',
+        'output': {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
+    },
+    {
+        'function': count_characters,
+        'input': '123 123',
+        'output': {'1': 2, '2': 2, '3': 2, ' ': 1}
+    },
+    {
+        'function': count_characters,
+        'input': '!!!',
+        'output': {'!': 3}
+    },
+    {
+        'function': count_characters,
+        'input': '',
+        'output': {}
+    },
+    {
+        'function': count_characters,
+        'input': 'aAaA',
+        'output': {'a': 4}
     }
 ]
 

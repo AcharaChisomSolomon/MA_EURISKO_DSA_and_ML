@@ -3,6 +3,7 @@ from ex2 import hexadecimal_to_decimal
 from ex3 import decimal_to_binary
 from ex4 import decimal_to_hexadecimal
 from ex5 import binary_to_hexadecimal
+from ex6 import hexadecimal_to_binary
 
 tests = [
     # Tests for binary to decimal
@@ -163,6 +164,38 @@ tests = [
         'function': binary_to_hexadecimal,
         'input': '11111111',
         'output': 'FF'
+    },
+
+    # Tests for hexadecimal to binary
+    {
+        'function': hexadecimal_to_binary,
+        'input': '1A',
+        'output': '11010'
+    },
+    {
+        'function': hexadecimal_to_binary,
+        'input': '0',
+        'output': '0'
+    },
+    {
+        'function': hexadecimal_to_binary,
+        'input': '1',
+        'output': '1'
+    },
+    {
+        'function': hexadecimal_to_binary,
+        'input': 'F',
+        'output': '1111'
+    },
+    {
+        'function': hexadecimal_to_binary,
+        'input': '10',
+        'output': '10000'
+    },
+    {
+        'function': hexadecimal_to_binary,
+        'input': 'FF',
+        'output': '11111111'
     }
 ]
 

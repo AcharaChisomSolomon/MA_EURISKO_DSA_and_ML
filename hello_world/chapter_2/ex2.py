@@ -1,4 +1,4 @@
+from any_to_decimal import any_base_to_decimal
+
 def hexadecimal_to_decimal(string):
-    hex_table = {
-        'A': 10
-    }
+    return any_base_to_decimal(16, string)

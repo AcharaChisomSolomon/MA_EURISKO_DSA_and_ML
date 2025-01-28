@@ -1,4 +1,5 @@
 from ex1 import binary_to_decimal
+from ex2 import hexadecimal_to_decimal
 
 tests = [
     # Tests for binary to decimal
@@ -31,6 +32,38 @@ tests = [
         'function': binary_to_decimal,
         'input': '100000',
         'output': '32'
+    },
+
+    # Tests for hexadecimal to decimal
+    {
+        'function': hexadecimal_to_decimal,
+        'input': '1A',
+        'output': '26'
+    },
+    {
+        'function': hexadecimal_to_decimal,
+        'input': '0',
+        'output': '0'
+    },
+    {
+        'function': hexadecimal_to_decimal,
+        'input': 'F',
+        'output': '15'
+    },
+    {
+        'function': hexadecimal_to_decimal,
+        'input': '10',
+        'output': '16'
+    },
+    {
+        'function': hexadecimal_to_decimal,
+        'input': 'FF',
+        'output': '255'
+    },
+    {
+        'function': hexadecimal_to_decimal,
+        'input': '100',
+        'output': '256'
     }
 ]
 

@@ -1,9 +1,4 @@
+from any_to_decimal import any_base_to_decimal
+
 def binary_to_decimal(string):
-    output = 0
-    power = len(string) - 1
-
-    for char in string:
-        output += int(char) * (2 ** power)
-        power -= 1
-
-    return str(output)
+    return any_base_to_decimal(2, string)

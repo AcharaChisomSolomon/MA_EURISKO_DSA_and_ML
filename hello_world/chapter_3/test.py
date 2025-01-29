@@ -1,4 +1,5 @@
 from ex1 import generate_first_n_recurse1_terms, get_nth_recursive1_term
+from ex2 import generate_n_collatz_sequence, get_nth_collatz_sequence
 
 
 tests = [
@@ -51,6 +52,56 @@ tests = [
         'function': get_nth_recursive1_term,
         'input': 5,
         'output': 245
+    },
+    {
+        'function': generate_n_collatz_sequence,
+        'input': 1,
+        'output': [25]
+    },
+    {
+        'function': generate_n_collatz_sequence,
+        'input': 2,
+        'output': [25, 76]
+    },
+    {
+        'function': generate_n_collatz_sequence,
+        'input': 3,
+        'output': [25, 76, 38]
+    },
+    {
+        'function': generate_n_collatz_sequence,
+        'input': 4,
+        'output': [25, 76, 38, 19]
+    },
+    {
+        'function': generate_n_collatz_sequence,
+        'input': 5,
+        'output': [25, 76, 38, 19, 58]
+    },
+    {
+        'function': get_nth_collatz_sequence,
+        'input': 1,
+        'output': 25
+    },
+    {
+        'function': get_nth_collatz_sequence,
+        'input': 2,
+        'output': 76
+    },
+    {
+        'function': get_nth_collatz_sequence,
+        'input': 3,
+        'output': 38
+    },
+    {
+        'function': get_nth_collatz_sequence,
+        'input': 4,
+        'output': 19
+    },
+    {
+        'function': get_nth_collatz_sequence,
+        'input': 5,
+        'output': 58
     }
 ]
 

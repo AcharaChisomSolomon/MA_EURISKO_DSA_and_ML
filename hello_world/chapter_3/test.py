@@ -1,5 +1,6 @@
 from ex1 import generate_first_n_recurse1_terms, get_nth_recursive1_term
 from ex2 import generate_n_collatz_sequence, get_nth_collatz_sequence
+from ex3 import generate_fibonacci_sequence, get_nth_fibonacci_term
 
 
 tests = [
@@ -102,6 +103,66 @@ tests = [
         'function': get_nth_collatz_sequence,
         'input': 5,
         'output': 58
+    },
+    {
+        'function': generate_fibonacci_sequence,
+        'input': 1,
+        'output': [0]
+    },
+    {
+        'function': generate_fibonacci_sequence,
+        'input': 2,
+        'output': [0, 1]
+    },
+    {
+        'function': generate_fibonacci_sequence,
+        'input': 3,
+        'output': [0, 1, 1]
+    },
+    {
+        'function': generate_fibonacci_sequence,
+        'input': 4,
+        'output': [0, 1, 1, 2]
+    },
+    {
+        'function': generate_fibonacci_sequence,
+        'input': 5,
+        'output': [0, 1, 1, 2, 3]
+    },
+    {
+        'function': generate_fibonacci_sequence,
+        'input': 6,
+        'output': [0, 1, 1, 2, 3, 5]
+    },
+    {
+        'function': get_nth_fibonacci_term,
+        'input': 1,
+        'output': 0
+    },
+    {
+        'function': get_nth_fibonacci_term,
+        'input': 2,
+        'output': 1
+    },
+    {
+        'function': get_nth_fibonacci_term,
+        'input': 3,
+        'output': 1
+    },
+    {
+        'function': get_nth_fibonacci_term,
+        'input': 4,
+        'output': 2
+    },
+    {
+        'function': get_nth_fibonacci_term,
+        'input': 5,
+        'output': 3
+    },
+    {
+        'function': get_nth_fibonacci_term,
+        'input': 6,
+        'output': 5
     }
 ]
 

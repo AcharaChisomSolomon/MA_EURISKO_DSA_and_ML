@@ -1,4 +1,5 @@
 from ex1 import encode_string
+from ex2 import decode_numbers
 
 tests = [
     {
@@ -20,6 +21,41 @@ tests = [
         'function': encode_string,
         'input': ("encode", 4, 2),
         'output': [22, 58, 14, 62, 18, 22]
+    },
+    {
+        'function': encode_string,
+        'input': ("a cat", 2, 3),
+        'output': [5, 3, 9, 5, 43]
+    },
+    {
+        'function': decode_numbers,
+        'input': ([19, 13, 27, 27, 33], 2, 3),
+        'output': "hello"
+    },
+    {
+        'function': decode_numbers,
+        'input': ([23, 15, 18, 12, 4], 1, 0),
+        'output': "world"
+    },
+    {
+        'function': decode_numbers,
+        'input': ([61, 16, 58, 61], 3, 1),
+        'output': "test"
+    },
+    {
+        'function': decode_numbers,
+        'input': ([22, 58, 14, 62, 18, 22], 4, 2),
+        'output': "encode"
+    },
+    {
+        'function': decode_numbers,
+        'input': ([5, 3, 9, 5, 43], 2, 3),
+        'output': "a cat"
+    },
+    {
+        'function': decode_numbers,
+        'input': ([100, 200, 300], 2, 3),
+        'output': False  # These numbers do not correspond to a valid message
     }
 ]
 

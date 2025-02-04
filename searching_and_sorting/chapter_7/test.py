@@ -1,5 +1,6 @@
 from ex1 import encode_string
 from ex2 import decode_numbers
+from ex3 import get_message
 
 tests = [
     {
@@ -83,3 +84,6 @@ for test in tests:
         print(f'\tActual output: {actual_output}')
         print(f'\tDesired output: {desired_output}')
 print(f'Testing complete: {num_successes} successes and {num_failures} failures.')
+print()
+
+get_message()

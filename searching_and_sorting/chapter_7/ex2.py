@@ -5,9 +5,14 @@ def isValid(nums):
     return True
 
 def decode_numbers(numbers, a, b):
+    if a == 0:
+        return False
+    
     values = [(number - b) / a for number in numbers]
+
     if not isValid(values):
         return False
+    
     return ''.join([
         chr(97 + int(value) - 1) 
         if value != 0 else ' ' 

@@ -15,9 +15,10 @@ def is_valid(square):
 
 def print_square(square):
     print('=' * 9 * 2)
-    print(f'\t[[{",".join(list(map(lambda x: str(x), square[0])))}],')
-    print(f'\t [{",".join(list(map(lambda x: str(x), square[1])))}],')
-    print(f'\t [{",".join(list(map(lambda x: str(x), square[2])))}]]')
+    print(f'\t[')
+    for i in range(len(square)):
+        print(f'\t [{",".join(list(map(lambda x: str(x), square[i])))}]')
+    print(f'\t]')
     print()
 
 def get_digits(*args):
@@ -226,5 +227,5 @@ def backtracking():
     print(f'Took {permutations} permutations with BACKTRACKING')
     print(f'Got {count} squares whose rows, columns and diagonals add up to {TOTAL}')
 
-brute_force()
-backtracking()
+# brute_force()
+# backtracking()
